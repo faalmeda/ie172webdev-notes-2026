@@ -1,6 +1,6 @@
 # Module 4b: Login Pages
 
-# Login and Signup Pages
+## Login and Signup Pages
 
 - [Login and Signup Pages](#login-and-signup-pages)
 - [Setup your db for Login Credentials](#setup-your-db-for-login-credentials)
