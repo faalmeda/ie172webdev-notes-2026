@@ -82,11 +82,13 @@ We would like to add a conditional statement to control how details are saved ba
             else:
                 raise PreventUpdate
             
-            modifyDB(sql, values)
+            #modifyDB(sql, values)
 
             # If this is successful, we want the successmodal to show
-            modal_open = True
+            #modal_open = True
 ```
+
+You should also delete the sql and values that is originally at the end of the callback to prevent duplicates, go ahead and remove the redundant code.
 
 At this point, you can run the app. You should be able to save any new entries when `mode=add`, but you cannot save anything to the database when `mode=edit`.
 
