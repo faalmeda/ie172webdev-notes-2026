@@ -41,7 +41,7 @@
 1. Copy `login.py` and paste in the same page. You should have `login copy.py`.
 2. Rename the copy into `signup.py`.
 3. Simply rename the fields to make it look like a signup page. We are assuming that each user only need a username and password since this is only a demo. In real-life, this might not be the case.
-4. Create the callbacks for the signup page. See `IE271caseapp/apps/signup.py` for the relevant source code.
+4. Create the callbacks for the signup page. See `IE172caseapp/apps/signup.py` for the relevant source code.
 -* Find how passwords are **_hashed_** prior to saving to the db
 
 _Optional_: You may also want the following controls to the signup page:
