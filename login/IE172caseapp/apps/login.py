@@ -92,7 +92,7 @@ def loginprocess(loginbtn, sessionlogout_time,
             
             values = [username, encrypt_string(password)]
             cols = ['userid']
-            df = db.querydatafromdatabase(sql, values, cols)
+            df = db.getDataFromDB(sql, values, cols)
             
             if df.shape[0]: # if query returns rows
                 currentuserid = df['userid'][0]

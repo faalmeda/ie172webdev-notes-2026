@@ -115,7 +115,7 @@ def saveuser(loginbtn, username, password):
             encrypt_string = lambda string: hashlib.sha256(string.encode('utf-8')).hexdigest()  
             
             values = [username, encrypt_string(password)]
-            db.modifydatabase(sql, values)
+            db.modifyDB(sql, values)
             
             openmodal = True
         else:

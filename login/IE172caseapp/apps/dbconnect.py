@@ -16,8 +16,8 @@ def getdblocation():
     return db
 
 
-def modifydatabase(sql, values):
-    db = getdblocation()
+def modifyDB(sql, values):
+    db =getdblocation()
 
     # We create a cursor object
     # Cursor - a mechanism used to manipulate db objects on a per-row basis
@@ -33,7 +33,7 @@ def modifydatabase(sql, values):
     db.close()
 
 
-def querydatafromdatabase(sql, values, dfcolumns):
+def getDataFromDB(sql, values, dfcolumns):
     # ARGUMENTS
     # sql -- sql query with placeholders (%s)
     # values -- values for the placeholders
