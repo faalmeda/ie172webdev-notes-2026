@@ -30,4 +30,8 @@ GitHub repo containing materials for studying web development under IE 172: Info
 - [Guide to Git: Part 2](git/git-part2/README.md)
 - [Guide to Git: Part 3](git/git-part3/README.md)
 
+## Module 5
+
+- App Deployment (coming soon!)
+
 _Content from ie172webdev_notes by **casonday**_
