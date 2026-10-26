@@ -31,7 +31,7 @@ os.environ['DB_PASSWORD']   # gives you 'admin'
 ```
 
 This fixes the repeated changing of credentials everytime you pull your application for the remote repository only to find someone changed the API script (your dbconnect.py).
-More importantly, this is a far more secure and flexible way to manage credentials in the context of managing your information locally and online.
+More importantly, this is a far more secure and flexible way to manage credentials in the context of handling your information locally and online.
 
 Just as a gentle reminder, GitHub repositories can be made public, so storing passwords and sensitive information is a very bad idea and lacks the privacy that other cloud storage providers offer.
 
@@ -109,3 +109,29 @@ def modifyDB(sql, values):
 ### Step 5: Test your app
 
 Don't forget to save your changes first then run the app normally. If an error occurs please double-check your setup.
+
+### Step 6: Create the .env template
+
+Since `.env` is not shared, others need to know which variables to set. Create a second file called `.env.example` with the same names but with placeholder values:
+
+```text
+DB_HOST=your-database-host
+DB_NAME=your-database-name
+DB_USER=your-database-user
+DB_PORT=5432
+DB_PASSWORD=your-database-password
+```
+
+Unlike `.env`, this file **is** committed to Git, because it contains no real credentials. Anyone who clones your repo copies it to `.env` and fills in their own values.
+
+### Step 7: Check that Git is ignoring the file
+
+```bash
+git status
+```
+
+`.env` must **not** appear in the list of files to be committed. `.env.example` should.
+
+### Next step
+
+When you deploy in the next module, you will not upload your `.env` file. Instead, you will enter these same variable names (`DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PORT`, `DB_PASSWORD`) in the hosting platform's dashboard, with values for your online database. Feel free to use this setup to streamline your development process!
