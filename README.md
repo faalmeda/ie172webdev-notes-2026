@@ -14,17 +14,17 @@ GitHub repo containing materials for studying web development under IE 172: Info
 - [b. App Setup](module2/2b/README.md)
 - [c. Create 'Add Form'](module2/2c/README.md)
 
-## Module 3
+## Module 3: Edit and Delete Functions
 
 - [a. Records Table List](module3/3a/README.md)
 - [b. Records Edit Function](module3/3b/README.md)
 
-## Module 4
+## Module 4: Additional Modules
 
 - [a. Reports](module4/README.md)
 - [b. Login Page](login/README.md)
 
-## Module 5
+## Module 5: Application Deployment
 
 - [a. Using .env](module5\5a\README.md)
 - b. App Deployment Part 1 (UNDER CONSTRUCTION)
