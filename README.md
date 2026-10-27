@@ -26,7 +26,7 @@ GitHub repo containing materials for studying web development under IE 172: Info
 
 ## Module 5: Application Deployment
 
-- [a. Using .env](module5\5a\README.md)
+- [a. Using .env](module5/5a/README.md)
 - b. App Deployment Part 1 (UNDER CONSTRUCTION)
 - c. App Deployment Part 2 (UNDER CONSTRUCTION)
 
