@@ -24,14 +24,16 @@ GitHub repo containing materials for studying web development under IE 172: Info
 - [a. Reports](module4/README.md)
 - [b. Login Page](login/README.md)
 
+## Module 5
+
+- [a. Using .env](module5\5a\README.md)
+- b. App Deployment Part 1 (UNDER CONSTRUCTION)
+- c. App Deployment Part 2 (UNDER CONSTRUCTION)
+
 ## Git Basics
 
 - [Guide to Git: Part 1](git/git-part1/README.md)
 - [Guide to Git: Part 2](git/git-part2/README.md)
 - [Guide to Git: Part 3](git/git-part3/README.md)
-
-## Module 5
-
-- App Deployment (coming soon!)
 
 _Content from ie172webdev_notes by **casonday**_

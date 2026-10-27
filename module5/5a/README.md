@@ -7,13 +7,15 @@
 ## 1. Preliminaries
 
 Welcome to Module 5 where we go into a critical step of app development, deploying your application for demonstration.
-Application deployment is a major undertaking that requires additional setup and maintenance you may not be familiar with, but it is one of the biggest indicators of your proficiency to develop applications that provide value to potential clients.
+Application deployment is a major undertaking that requires additional setup and maintenance you may not be familiar with, but it is one of the biggest indicators of your proficiency to develop applications that provide value to potential customers.
 
 The contents of this module are for the purposes of demonstrating coursework, this is not meant to actually setup your app in a production environment.
 However doing this will allow anyone with an internet connection to access your web application (provided they know the URL).
 
 The first step described in this submodule can be done at any time during development (the earlier the better!).
 This utilizes a common practice in collaborative development where credentials such as your database username or password is stored on a separate file locally in your computer.
+
+**This module should be done by all members of the group.**
 
 ## 2. What is an .env file?
 
@@ -33,7 +35,7 @@ os.environ['DB_PASSWORD']   # gives you 'admin'
 This fixes the repeated changing of credentials everytime you pull your application for the remote repository only to find someone changed the API script (your dbconnect.py).
 More importantly, this is a far more secure and flexible way to manage credentials in the context of handling your information locally and online.
 
-Just as a gentle reminder, GitHub repositories can be made public, so storing passwords and sensitive information is a very bad idea and lacks the privacy that other cloud storage providers offer.
+Your DB_USER and DB_PASSWORD would classify as **secrets** in a software development environment, which are sensitive digital credentials to access certain databases. If an attacker gets a hold of this information because you left it in GitHub, then they would have access to your data and infiltrate your application for purposes unknown to you. Just as a reminder, **DO NOT STORE PASSWORDS OR SECRETS** on a GitHub repository.
 
 ## 3. Instructions to setup .env
 
@@ -43,6 +45,12 @@ In your terminal, with your virtual environment active, run the following:
 
 ```bash
 pip install python dot-env
+```
+
+For Mac:
+
+```bash
+pip3 install python dot-env
 ```
 
 ### 3.2 Step 2: Protect .env with .gitignore
@@ -56,6 +64,8 @@ Before creating your `.env` file, update your .gitignore to exclude the file:
 .env
 ```
 
+Double-check that .env is included in your `.gitignore` before you proceed.
+
 ### Step 3: Create the .env file
 
 In the root folder, create a new file with the name ".env"
@@ -64,13 +74,15 @@ Similar to .gitignore, this is a text file where you can add credentials specifi
 Add the following in your newly created file. Change the credentials according to your own use case.
 
 ```text
-DB_HOST=localhost
-DB_NAME=ie172sampledb
+DB_HOST=<database-host>
+DB_NAME=<database-name>
 DB_USER=postgres
 DB_PORT=5432
-DB_PASSWORD=admin
+DB_PASSWORD=<your-password>
+PYTHON_VERSION=<python-version>
 ```
 
+- Run `python --version` or `python3 --version` on the terminal and encode the version number. An example would be 3.14.1. **Encode all three numbers.**
 - No spaces around the `=` sign.
 - No quotes needed around the values.
 - No comments on the same line as a value.
@@ -120,9 +132,10 @@ DB_NAME=your-database-name
 DB_USER=your-database-user
 DB_PORT=5432
 DB_PASSWORD=your-database-password
+PYTHON_VERSION=python-version<xx.xx.xx>
 ```
 
-Unlike `.env`, this file **is** committed to Git, because it contains no real credentials. Anyone who clones your repo copies it to `.env` and fills in their own values.
+Unlike `.env`, this file **is** committed to Git, because it contains no real credentials or secrets. Anyone who clones your repo copies it to `.env` and fills in their own values.
 
 ### Step 7: Check that Git is ignoring the file
 
@@ -134,4 +147,4 @@ git status
 
 ### Next step
 
-When you deploy in the next module, you will not upload your `.env` file. Instead, you will enter these same variable names (`DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PORT`, `DB_PASSWORD`) in the hosting platform's dashboard, with values for your online database. Feel free to use this setup to streamline your development process!
+Congratulations, you have streamlined the development process. Now you do not have to edit `dbconnect.py` every time. This is a prerequisite if you are to deploy the application online, but you may still even if you intend to share your app locally.
