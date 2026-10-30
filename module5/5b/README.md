@@ -1,4 +1,4 @@
-# Module 5b: Setting up your database in Supabase
+# Module 5b: App Deployment Part 1
 
 1. [Preliminaries](#1-preliminaries)
 2. [What is Supabase?](#2-what-is-supabase)
@@ -11,23 +11,23 @@
 
 ## 1. Preliminaries
 
-So far your app has been talking to a PostgreSQL database running on your own computer (`localhost`). That database is invisible to the internet, so when your app is deployed online, it will not be able to reach it.
+So far your app has been talking to a PostgreSQL database running on your own computer (`localhost`). The database is invisible and not connected to the internet, so when your app is deployed online, it will not be able to reach it.
 
 In this module you will create a free PostgreSQL database in the cloud using **Supabase**, copy your local database into it, and test your app against it from your own computer. Deploying the app itself comes in the next module.
 
-Complete **Module 5a** first. This module assumes your app already reads its database credentials from a `.env` file.
+  - Complete **Module 5a** first. 
+  - Your database should be at least close to its final version.
 
 You will need:
 
 - A Supabase account (sign up at <https://supabase.com>; signing in with GitHub is the quickest)
-- Your local database running, with the tables and data you want to deploy
-- pgAdmin (or `psql`) installed. If you have been running PostgreSQL locally, you most likely already have one of them.
+- Your local database running via pgAdmin, with the tables and data you want to deploy
 
 ## 2. What is Supabase?
 
-Supabase is a platform built around PostgreSQL. It also offers authentication, file storage, and an automatic API, but we only need one thing from it: a hosted PostgreSQL database that your app can connect to over the internet.
+Supabase is a Backend-as-a-Service platform built around PostgreSQL. It also offers authentication, file storage, and an automatic API, but we only need one thing from it: a hosted PostgreSQL database that your app can connect to over the internet.
 
-Because it is regular PostgreSQL, your SQL, your tables, and your `psycopg2` code all work unchanged. Only the connection details change, which is exactly why we moved them into a `.env` file.
+Because it is regular PostgreSQL, your SQL, your tables, and your Python code all work unchanged. Only the database credentials change, which is exactly why we moved them into a `.env` file.
 
 ## 3. Create your Supabase project
 
